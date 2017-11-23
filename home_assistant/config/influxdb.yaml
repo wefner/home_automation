@@ -1,0 +1,15 @@
+host: !secret influxdb_host_ip
+port: 8086
+database: !secret influxdb_database
+username: !secret influxdb_username
+password: !secret influxdb_admin_password
+default_measurement: state
+tags:
+  source: homeassistant
+
+#blacklist:
+#   - entity.id1
+#   - entity.id2
+#whitelist:
+#   - entity.id3
+#   - entity.id4

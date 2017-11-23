@@ -1,0 +1,15 @@
+- name: home_bot
+  platform: telegram
+  chat_id: !secret home_bot_chat_id
+
+- name: telegram_costas
+  platform: telegram
+  chat_id: !secret telegram_costas_id
+
+- name: telegram_maria
+  platform: telegram
+  chat_id: !secret telegram_maria_id
+
+- name: home_bot_pushbullet
+  platform: pushbullet
+  api_key: !secret pushbullet_api_key

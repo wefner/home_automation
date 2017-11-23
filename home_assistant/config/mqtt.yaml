@@ -1,0 +1,1 @@
+broker: !secret mqtt_host_ip

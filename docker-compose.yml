@@ -1,0 +1,117 @@
+version: "2"
+services: 
+
+  prometheus:
+    image: prom/prometheus
+    restart: unless-stopped
+    container_name: prometheus
+    volumes:
+      - ./prometheus/etc/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/data:/prometheus
+    command:
+      - '-config.file=/etc/prometheus/prometheus.yml'
+      - '-storage.local.path=/prometheus'
+      - '-storage.local.memory-chunks=100000'
+    restart: unless-stopped
+    expose:
+      - 9090
+    ports:
+      - 9090:9090
+    logging:
+      # limit logs retained on host to 25MB
+      driver: "json-file"
+      options:
+        max-size: "500k"
+        max-file: "50"
+
+  cadvisor:
+    image: google/cadvisor:v0.24.1
+    container_name: cadvisor
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    restart: unless-stopped
+    logging:
+      # limit logs retained on host to 25MB
+      driver: "json-file"
+      options:
+        max-size: "500k"
+        max-file: "50"
+
+  mosquitto:
+    image: eclipse-mosquitto
+    restart: unless-stopped
+    container_name: mosquitto
+    volumes:
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/log:/mosquitto/log
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    expose:
+      - 1883
+      - 9001
+    ports:
+      - 1883:1883
+      - 9001:9001
+    logging:
+      # limit logs retained on host to 25MB
+      driver: "json-file"
+      options:
+        max-size: "500k"
+        max-file: "50"
+
+  influxdb:
+    image: influxdb:1.1.1
+    restart: unless-stopped
+    volumes:
+      - /influxdb/data:/var/lib/influxdb
+    ports:
+      - 8086:8086
+    logging:
+      # limit logs retained on host to 25MB
+      driver: "json-file"
+      options:
+        max-size: "500k"
+        max-file: "50"
+
+  grafana:
+    image: grafana/grafana:4.1.2
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
+      - GF_DASHBOARDS_JSON_ENABLED=true
+      - GF_DASHBOARDS_JSON_PATH=/dashboards
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - ./grafana/data:/var/lib/grafana
+      # store predefined dashboards (json) here
+      - ./grafana/dashboards:/dashboards
+    logging:
+      # limit logs retained on host to 25MB
+      driver: "json-file"
+      options:
+        max-size: "500k"
+        max-file: "50"
+
+  home_assistant:
+    image: homeassistant/home-assistant:0.56
+    restart: unless-stopped
+    container_name: home-assistant
+    volumes:
+      - ./home_assistant/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    expose:
+      - 8123
+    ports:    
+      - 8123:8123
+    logging:
+      # limit logs retained on host to 25MB
+      driver: "json-file"
+      options:
+        max-size: "500k"
+        max-file: "50"

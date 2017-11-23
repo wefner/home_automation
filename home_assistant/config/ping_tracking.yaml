@@ -1,0 +1,39 @@
+- platform: ping
+  count: 5
+  hosts:
+    costas: !secret costas_phone_ip
+
+- platform: ping
+  count: 5
+  hosts:
+    maria: !secret maria_phone_ip
+
+- platform: ping
+  count: 5
+  hosts:
+    printer: !secret printer_ip
+
+- platform: ping
+  count: 5
+  hosts:
+    costas_blanket: !secret costas_blanket_ip
+
+- platform: ping
+  count: 5
+  hosts:
+    marias_blanket: !secret marias_blanket_ip
+
+- platform: ping
+  count: 5
+  hosts:
+    philips_remote: !secret philips_remote_ip
+
+- platform: ping
+  count: 5
+  hosts:
+    internet_1: 8.8.8.8
+
+- platform: ping
+  count: 5
+  hosts:
+    internet_2: 8.8.4.4

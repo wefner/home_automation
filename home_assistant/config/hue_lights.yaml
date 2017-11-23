@@ -1,0 +1,4 @@
+platform: hue
+host: 192.168.20.20
+allow_unreachable: true
+allow_hue_groups: true

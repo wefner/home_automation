@@ -1,0 +1,11 @@
+- platform: rest
+  resource: !secret costas_blanket_api
+  name: "Costas's Blanket"
+  body_on: '{"state": true}'
+  body_off: '{"state": false}'
+
+- platform: rest
+  resource: !secret marias_blanket_api
+  name: "Maria's Blanket"
+  body_on: '{"state": true}'
+  body_off: '{"state": false}'

@@ -1,0 +1,117 @@
+default_view:
+  view: yes
+  entities:
+    - sun.sun
+    - climate.toon_van_eneco
+    - device_tracker.costas
+    - device_tracker.maria
+    - device_tracker.internet_1
+    - device_tracker.internet_2
+    - sensor.gas_current
+    - sensor.gas_today
+    - sensor.power_current
+    - sensor.power_today
+    - sensor.fastcom_download
+    - sensor.speedtest_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload
+    - sensor.yr_temperature
+    - sensor.yr_humidity
+    - sensor.yr_cloudiness
+    - sensor.yr_dewpoint_temperature
+    - sensor.yr_precipitation
+    - sensor.yr_pressure
+    - sensor.yr_symbol
+    - sensor.yr_wind_speed
+    - weblink.sensor_graphs
+
+bedroom:
+  name: Bedroom
+  view: true
+  entities:
+    - device_tracker.costas_blanket
+    - device_tracker.marias_blanket
+    - light.bedroom
+    - light.bedroom_ceiling
+    - sensor.bedroom_inner_middle_humidity
+    - sensor.bedroom_inner_middle_temperature
+    - sensor.bedroom_outer_right_corner_humidity
+    - sensor.bedroom_outer_right_corner_temperature
+    - switch.costass_blanket
+    - switch.marias_blanket
+
+living_room:
+  name: Living Room
+  view: true
+  entities:
+    - device_tracker.philips_remote
+    - light.living_room
+    - light.living_room_hanging_light
+    - light.living_room_standing_lamp
+    - media_player.kodi
+    - media_player.philips_ott_2000_remote
+    - media_player.samsung_tv_remote
+
+kitchen:
+  name: Kitchen
+  view: true
+  entities:
+    - automation.dishwasher_done_notification
+    - automation.dishwasher_done_notification_2
+    - light.kitchen
+    - light.kitchen_ceiling
+    - light.kitchen_shelves
+    - switch.dishwasher
+
+entrance:
+  name: Entrance
+  view: true
+  entities:
+    - automation.porch_light_off_on_sunrise
+    - automation.porch_light_on_on_sunset
+    - light.entrance
+    - light.entrance_front_door
+
+study:
+  name: Study
+  view: true
+  entities:
+    - device_tracker.printer
+    - light.study
+    - light.study_ceiling_left
+    - light.study_ceiling_right
+
+washing_room:
+  name: Washing Room
+  view: true
+  entities:
+  - automation.dryer_done_notification
+  - automation.washing_machine_done_notification
+  - sensor.dryer
+  - sensor.washing_machine
+  - sensor.dryer_current_power
+  - sensor.dryer_today_energy
+  - sensor.washer_current_power
+  - sensor.washer_today_energy
+  - switch.dryer
+  - switch.washer
+
+guest_room:
+  name: Guest Room
+  view: false
+  entities:
+
+Bathroom:
+  name: Bathroom
+  view: false
+  entities:
+
+front_garden:
+  name: Front Garden
+  view: false
+  entities:
+
+back_garden:
+  name: Back Garden
+  view: false
+  entities:
