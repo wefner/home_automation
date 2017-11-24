@@ -85,5 +85,3 @@
     entity_id: light.entrance_front_door
     data:
       transition: 1800
-
-

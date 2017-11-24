@@ -49,8 +49,8 @@ living_room:
     - light.living_room_hanging_light
     - light.living_room_standing_lamp
     - media_player.kodi
-    - media_player.philips_ott_2000_remote
-    - media_player.samsung_tv_remote
+    # - media_player.philips_ott_2000_remote
+    # - media_player.samsung_tv_remote
 
 kitchen:
   name: Kitchen

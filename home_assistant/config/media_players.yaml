@@ -4,12 +4,12 @@
   username: !secret kodi_username
   password: !secret kodi_password
 
-- platform: philips_ott_2000
-  host: !secret philips_ott_2000_host_ip
-  name: Philips OTT 2000 Remote
-
-- platform: cast
-  host: !secret cast_ip
-
-- platform: samsungtv
-  host: !secret samsung_tv_ip
+# - platform: philips_ott_2000
+#   host: !secret philips_ott_2000_host_ip
+#   name: Philips OTT 2000 Remote
+#
+# - platform: cast
+#   host: !secret cast_ip
+#
+# - platform: samsungtv
+#   host: !secret samsung_tv_ip

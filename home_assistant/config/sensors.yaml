@@ -73,7 +73,7 @@
                   on
               {%  elif states.sensor.dryer.state == 'active'  %}
                   finished
-              {%- endif %}  
+              {%- endif %}
           {%- endif %}
 
 - platform: template
