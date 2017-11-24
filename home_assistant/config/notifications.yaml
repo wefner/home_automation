@@ -1,6 +1,6 @@
 - name: home_bot
   platform: telegram
-  chat_id: !secret home_bot_chat_id
+  chat_id: !secret telegram_group_id
 
 - name: telegram_costas
   platform: telegram
