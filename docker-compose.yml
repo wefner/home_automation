@@ -1,8 +1,8 @@
 version: "2"
-services: 
+services:
 
   prometheus:
-    image: prom/prometheus
+    image: prom/prometheus:v1.7.1
     restart: unless-stopped
     container_name: prometheus
     volumes:
@@ -41,7 +41,7 @@ services:
         max-file: "50"
 
   mosquitto:
-    image: eclipse-mosquitto
+    image: eclipse-mosquitto:1.4.12
     restart: unless-stopped
     container_name: mosquitto
     volumes:
@@ -99,7 +99,7 @@ services:
         max-file: "50"
 
   home_assistant:
-    image: homeassistant/home-assistant:0.56
+    image: homeassistant/home-assistant:0.58.1
     restart: unless-stopped
     container_name: home-assistant
     volumes:
@@ -107,7 +107,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     expose:
       - 8123
-    ports:    
+    ports:
       - 8123:8123
     logging:
       # limit logs retained on host to 25MB
