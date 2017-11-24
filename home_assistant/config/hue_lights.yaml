@@ -1,4 +1,4 @@
 platform: hue
-host: 192.168.20.20
+host: !secret hue_base_ip
 allow_unreachable: true
 allow_hue_groups: true
