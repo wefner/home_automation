@@ -23,6 +23,8 @@ default_view:
     - sensor.yr_pressure
     - sensor.yr_symbol
     - sensor.yr_wind_speed
+    - sensor.home_average_temperature
+    - sensor.home_average_humidity
     - weblink.sensor_graphs
 
 bedroom:
@@ -33,12 +35,14 @@ bedroom:
     - device_tracker.marias_blanket
     - light.bedroom
     - light.bedroom_ceiling
-    - sensor.bedroom_outer_right_temperature
-    - sensor.bedroom_outer_right_humidity
-    - sensor.bedroom_outer_left_temperature
-    - sensor.bedroom_outer_left_humidity
-    - sensor.bedroom_inner_middle_temperature
-    - sensor.bedroom_inner_middle_humidity
+    - sensor.bedroom_average_humidity
+    - sensor.bedroom_average_temperature
+#    - sensor.bedroom_outer_right_temperature
+#    - sensor.bedroom_outer_right_humidity
+#    - sensor.bedroom_outer_left_temperature
+#    - sensor.bedroom_outer_left_humidity
+#    - sensor.bedroom_inner_middle_temperature
+#    - sensor.bedroom_inner_middle_humidity
     - switch.costass_blanket
     - switch.marias_blanket
 
@@ -82,14 +86,16 @@ study:
     - light.study
     - light.study_ceiling_left
     - light.study_ceiling_right
-    - sensor.study_inner_left_temperature
-    - sensor.study_inner_left_temperature
-    - sensor.study_inner_right_temperature
-    - sensor.study_inner_right_humidity
-    - sensor.study_outer_right_temperature
-    - sensor.study_outer_right_humidity
-    - sensor.study_outer_left_temperature
-    - sensor.study_outer_left_humidity
+    - sensor.study_average_temperature
+    - sensor.study_average_humidity
+#    - sensor.study_inner_left_temperature
+#    - sensor.study_inner_left_temperature
+#    - sensor.study_inner_right_temperature
+#    - sensor.study_inner_right_humidity
+#    - sensor.study_outer_right_temperature
+#    - sensor.study_outer_right_humidity
+#    - sensor.study_outer_left_temperature
+#    - sensor.study_outer_left_humidity
 
 washing_room:
   name: Washing Room
@@ -105,8 +111,8 @@ washing_room:
     - sensor.washer_today_energy
     - switch.dryer
     - switch.washer
-    - sensor.washing_room_back_temperature
-    - sensor.washing_room_back_humidity
+    - sensor.washing_room_average_humidity
+    - sensor.washing_room_average_temperature
 
 guest_room:
   name: Guest Room
