@@ -33,10 +33,12 @@ bedroom:
     - device_tracker.marias_blanket
     - light.bedroom
     - light.bedroom_ceiling
-    - sensor.bedroom_inner_middle_humidity
-    - sensor.bedroom_inner_middle_temperature
-    - sensor.bedroom_outer_right_corner_humidity
     - sensor.bedroom_outer_right_corner_temperature
+    - sensor.bedroom_outer_right_corner_humidity
+    - sensor.bedroom_outer_left_corner_temperature
+    - sensor.bedroom_outer_left_corner_humidity
+    - sensor.bedroom_inner_middle_temperature
+    - sensor.bedroom_inner_middle_humidity
     - switch.costass_blanket
     - switch.marias_blanket
 
@@ -80,21 +82,31 @@ study:
     - light.study
     - light.study_ceiling_left
     - light.study_ceiling_right
+    - sensor.study_inner_left_temperature
+    - sensor.study_inner_left_temperature
+    - sensor.study_inner_right_temperature
+    - sensor.study_inner_right_humidity
+    - sensor.study_outer_right_temperature
+    - sensor.study_outer_right_humidity
+    - sensor.study_outer_left_temperature
+    - sensor.study_outer_left_humidity
 
 washing_room:
   name: Washing Room
   view: true
   entities:
-  - automation.dryer_done_notification
-  - automation.washing_machine_done_notification
-  - sensor.dryer
-  - sensor.washing_machine
-  - sensor.dryer_current_power
-  - sensor.dryer_today_energy
-  - sensor.washer_current_power
-  - sensor.washer_today_energy
-  - switch.dryer
-  - switch.washer
+    - automation.dryer_done_notification
+    - automation.washing_machine_done_notification
+    - sensor.dryer
+    - sensor.washing_machine
+    - sensor.dryer_current_power
+    - sensor.dryer_today_energy
+    - sensor.washer_current_power
+    - sensor.washer_today_energy
+    - switch.dryer
+    - switch.washer
+    - sensor.washing_room_back_temperature
+    - sensor.washing_room_back_humidity
 
 guest_room:
   name: Guest Room
