@@ -145,7 +145,7 @@
 - platform: mqtt
   state_topic: 'home/study/inner_right'
   name: 'study_inner_right_temperature'
-  friendly_name: 'Study inner right temparature'
+  friendly_name: 'Study inner right temperature'
   unit_of_measurement: 'C'
   value_template: '{ value_json.temperature }'
 
@@ -159,7 +159,7 @@
 - platform: mqtt
   state_topic: 'home/study/outer_right'
   name: 'study_outer_right_temperature'
-  friendly_name: 'Study outer right temparature'
+  friendly_name: 'Study outer right temperature'
   unit_of_measurement: 'C'
   value_template: '{ value_json.temperature }'
 
@@ -173,7 +173,7 @@
 - platform: mqtt
   state_topic: 'home/study/outer_left'
   name: 'study_outer_left_temperature'
-  friendly_name: 'Study outer left temparature'
+  friendly_name: 'Study outer left temperature'
   unit_of_measurement: 'C'
   value_template: '{ value_json.temperature }'
 
@@ -187,7 +187,7 @@
 - platform: mqtt
   state_topic: 'home/washing_room/back'
   name: 'washing_room_back_temperature'
-  friendly_name: 'Washing_Room back temparature'
+  friendly_name: 'Washing_Room back temperature'
   unit_of_measurement: 'C'
   value_template: '{ value_json.temperature }'
 
@@ -201,7 +201,7 @@
 # - platform: mqtt
 #   state_topic: 'home/washing_room/front'
 #   name: 'washing_room_front_temperature'
-#   friendly_name: 'Washing_Room front temparature'
+#   friendly_name: 'Washing_Room front temperature'
 #   unit_of_measurement: 'C'
 #   value_template: '{ value_json.temperature }'
 #
