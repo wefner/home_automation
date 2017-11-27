@@ -87,28 +87,28 @@
           {%- endif %}
 
 - platform: mqtt
-  state_topic: 'home/bedroom/outer_right'
+  state_topic: 'home/bedroom/outer_right_corner'
   name: 'bedroom_outer_right_temperature'
   friendly_name: 'Bedroom outer right temperature'
   unit_of_measurement: 'C'
   value_template: '{{ value_json.temperature }}'
 
 - platform: mqtt
-  state_topic: 'home/bedroom/outer_right'
+  state_topic: 'home/bedroom/outer_right_corner'
   name: 'bedroom_outer_right_humidity'
   friendly_name: 'Bedroom outer right humidity'
   unit_of_measurement: '%'
   value_template: '{{ value_json.humidity }}'
 
 - platform: mqtt
-  state_topic: 'home/bedroom/outer_left'
+  state_topic: 'home/bedroom/outer_left_corner'
   name: 'bedroom_outer_left_temperature'
   friendly_name: 'Bedroom outer left temperature'
   unit_of_measurement: 'C'
   value_template: '{{ value_json.temperature }}'
 
 - platform: mqtt
-  state_topic: 'home/bedroom/outer_left'
+  state_topic: 'home/bedroom/outer_left_corner'
   name: 'bedroom_outer_left_humidity'
   friendly_name: 'Bedroom outer left humidity'
   unit_of_measurement: '%'
