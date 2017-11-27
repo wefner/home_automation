@@ -134,7 +134,9 @@
       friendly_name: 'Bedroom Temperature'
       unit_of_measurement: 'C'
       value_template: >-
-        {{ ((float(states.sensor.bedroom_outer_right_temperature.state) + float(states.sensor.bedroom_outer_left_temperature.state) + float(states.sensor.bedroom_inner_middle_temperature.state)) / 3) | round(2) }}
+        {{ ((float(states.sensor.bedroom_outer_right_temperature.state) +
+        float(states.sensor.bedroom_outer_left_temperature.state) +
+        float(states.sensor.bedroom_inner_middle_temperature.state)) / 3) | round(2) }}
 
 - platform: template
   sensors:
@@ -142,7 +144,9 @@
       friendly_name: 'Bedroom Humidity'
       unit_of_measurement: '%'
       value_template: >-
-        {{ ((float(states.sensor.bedroom_outer_right_humidity.state) + float(states.sensor.bedroom_outer_left_humidity.state) + float(states.sensor.bedroom_inner_middle_humidity.state)) / 3) | round(2) }}
+        {{ ((float(states.sensor.bedroom_outer_right_humidity.state) +
+        float(states.sensor.bedroom_outer_left_humidity.state) +
+        float(states.sensor.bedroom_inner_middle_humidity.state)) / 3) | round(2) }}
 
 - platform: mqtt
   state_topic: 'home/study/inner_left'
@@ -206,7 +210,10 @@
       friendly_name: 'Study Temperature'
       unit_of_measurement: 'C'
       value_template: >-
-        {{ ((float(states.sensor.study_inner_left_temperature.state) + float(states.sensor.study_inner_right_temperature.state) + float(states.sensor.study_outer_right_temperature.state) + float(states.sensor.study_outer_left_temperature.state)) / 4) | round(2) }}
+        {{ ((float(states.sensor.study_inner_left_temperature.state) +
+        float(states.sensor.study_inner_right_temperature.state) +
+        float(states.sensor.study_outer_right_temperature.state) +
+        float(states.sensor.study_outer_left_temperature.state)) / 4) | round(2) }}
 
 - platform: template
   sensors:
@@ -214,7 +221,10 @@
       friendly_name: 'Study Humidity'
       unit_of_measurement: '%'
       value_template: >-
-        {{ ((float(states.sensor.study_inner_left_humidity.state) + float(states.sensor.study_inner_right_humidity.state) + float(states.sensor.study_outer_right_humidity.state) + float(states.sensor.study_outer_left_humidity.state)) / 4) | round(2) }}
+        {{ ((float(states.sensor.study_inner_left_humidity.state) +
+        float(states.sensor.study_inner_right_humidity.state) +
+        float(states.sensor.study_outer_right_humidity.state) +
+        float(states.sensor.study_outer_left_humidity.state)) / 4) | round(2) }}
 
 
 - platform: mqtt
