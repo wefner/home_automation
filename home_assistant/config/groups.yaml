@@ -33,10 +33,10 @@ bedroom:
     - device_tracker.marias_blanket
     - light.bedroom
     - light.bedroom_ceiling
-    - sensor.bedroom_outer_right_corner_temperature
-    - sensor.bedroom_outer_right_corner_humidity
-    - sensor.bedroom_outer_left_corner_temperature
-    - sensor.bedroom_outer_left_corner_humidity
+    - sensor.bedroom_outer_right_temperature
+    - sensor.bedroom_outer_right_humidity
+    - sensor.bedroom_outer_left_temperature
+    - sensor.bedroom_outer_left_humidity
     - sensor.bedroom_inner_middle_temperature
     - sensor.bedroom_inner_middle_humidity
     - switch.costass_blanket
