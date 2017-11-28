@@ -25,6 +25,7 @@ default_view:
     - sensor.yr_wind_speed
     - sensor.home_average_temperature
     - sensor.home_average_humidity
+    - sensor.smokedetector_smoke_detector
     - weblink.home_graphs
 
 bedroom:
@@ -37,14 +38,9 @@ bedroom:
     - light.bedroom_ceiling
     - sensor.bedroom_average_humidity
     - sensor.bedroom_average_temperature
-#    - sensor.bedroom_outer_right_temperature
-#    - sensor.bedroom_outer_right_humidity
-#    - sensor.bedroom_outer_left_temperature
-#    - sensor.bedroom_outer_left_humidity
-#    - sensor.bedroom_inner_middle_temperature
-#    - sensor.bedroom_inner_middle_humidity
     - switch.costass_blanket
     - switch.marias_blanket
+    - switch.bedroompanel
     - weblink.bedroom_graphs
 
 living_room:
@@ -66,7 +62,6 @@ kitchen:
   view: true
   entities:
     - automation.dishwasher_done_notification
-#    - automation.dishwasher_done_notification_2
     - light.kitchen
     - light.kitchen_ceiling
     - light.kitchen_shelves
@@ -94,14 +89,6 @@ study:
     - sensor.study_average_temperature
     - sensor.study_average_humidity
     - weblink.study_graphs
-#    - sensor.study_inner_left_temperature
-#    - sensor.study_inner_left_temperature
-#    - sensor.study_inner_right_temperature
-#    - sensor.study_inner_right_humidity
-#    - sensor.study_outer_right_temperature
-#    - sensor.study_outer_right_humidity
-#    - sensor.study_outer_left_temperature
-#    - sensor.study_outer_left_humidity
 
 washing_room:
   name: Washing Room

@@ -75,6 +75,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -117,6 +118,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -237,6 +239,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -279,6 +282,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -387,6 +391,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -429,6 +434,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -537,6 +543,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -579,6 +586,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -1123,11 +1131,12 @@
                 },
                 {
                   "params": [
-                    "null"
+                    "linear"
                   ],
                   "type": "fill"
                 }
               ],
+              "measurement": "Watt",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -1145,7 +1154,13 @@
                   }
                 ]
               ],
-              "tags": []
+              "tags": [
+                {
+                  "key": "entity_id",
+                  "operator": "=",
+                  "value": "bedroompanel_current_power"
+                }
+              ]
             }
           ],
           "thresholds": [],
@@ -1342,5 +1357,5 @@
   },
   "timezone": "browser",
   "title": "Bedroom",
-  "version": 4
+  "version": 6
 }

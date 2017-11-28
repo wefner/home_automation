@@ -83,6 +83,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -125,6 +126,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -245,6 +247,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -287,6 +290,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -395,6 +399,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -437,6 +442,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -545,6 +551,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -587,6 +594,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -695,6 +703,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -737,6 +746,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -1562,5 +1572,5 @@
   },
   "timezone": "browser",
   "title": "Study",
-  "version": 4
+  "version": 5
 }

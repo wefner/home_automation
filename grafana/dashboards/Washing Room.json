@@ -75,6 +75,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -117,6 +118,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -213,13 +215,15 @@
           "fill": 1,
           "id": 2,
           "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": true,
             "show": true,
             "total": false,
-            "values": false
+            "values": true
           },
           "lines": true,
           "linewidth": 1,
@@ -235,6 +239,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -277,6 +282,7 @@
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -361,13 +367,15 @@
           "fill": 1,
           "id": 3,
           "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": true,
             "show": true,
             "total": false,
-            "values": false
+            "values": true
           },
           "lines": true,
           "linewidth": 1,
@@ -383,6 +391,7 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "Temperature",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -420,11 +429,12 @@
                 {
                   "key": "entity_id",
                   "operator": "=",
-                  "value": "washing_room_back_temperature"
+                  "value": "washing_room_front_temperature"
                 }
               ]
             },
             {
+              "alias": "Humidity",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -462,7 +472,7 @@
                 {
                   "key": "entity_id",
                   "operator": "=",
-                  "value": "washing_room_back_humidity"
+                  "value": "washing_room_front_humidity"
                 }
               ]
             }
@@ -586,6 +596,49 @@
                   "value": "washing_room_back_humidity"
                 }
               ]
+            },
+            {
+              "alias": "Front",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "linear"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "%",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "entity_id",
+                  "operator": "=",
+                  "value": "washing_room_front_humidity"
+                }
+              ]
             }
           ],
           "thresholds": [],
@@ -705,6 +758,49 @@
                   "key": "entity_id",
                   "operator": "=",
                   "value": "washing_room_back_temperature"
+                }
+              ]
+            },
+            {
+              "alias": "Front",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "linear"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "C",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "entity_id",
+                  "operator": "=",
+                  "value": "washing_room_front_temperature"
                 }
               ]
             }
@@ -1030,5 +1126,5 @@
   },
   "timezone": "browser",
   "title": "Washing Room",
-  "version": 2
+  "version": 5
 }
