@@ -1,3 +1,18 @@
 entities:
-  - name: "Sensor graphs"
-    url: !secret grafana_dashboard_url
+  - name: "Home Graphs"
+    url: !secret home_dashboard_url
+
+  - name: "Bedroom Graphs"
+    url: !secret bedroom_dashboard_url
+
+  - name: "Study Graphs"
+    url: !secret study_dashboard_url
+
+  - name: "Washing Room Graphs"
+    url: !secret washing_room_dashboard_url
+
+  - name: "Kitchen Graphs"
+    url: !secret kitchen_dashboard_url
+
+  - name: "Living Room Graphs"
+    url: !secret living_room_dashboard_url

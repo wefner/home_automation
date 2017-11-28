@@ -25,7 +25,7 @@ default_view:
     - sensor.yr_wind_speed
     - sensor.home_average_temperature
     - sensor.home_average_humidity
-    - weblink.sensor_graphs
+    - weblink.home_graphs
 
 bedroom:
   name: Bedroom
@@ -45,6 +45,7 @@ bedroom:
 #    - sensor.bedroom_inner_middle_humidity
     - switch.costass_blanket
     - switch.marias_blanket
+    - weblink.bedroom_graphs
 
 living_room:
   name: Living Room
@@ -54,7 +55,9 @@ living_room:
     - light.living_room
     - light.living_room_hanging_light
     - light.living_room_standing_lamp
+    - light.tv_bias_light
     - media_player.kodi
+    - weblink.living_room_graphs
     # - media_player.philips_ott_2000_remote
     # - media_player.samsung_tv_remote
 
@@ -63,18 +66,20 @@ kitchen:
   view: true
   entities:
     - automation.dishwasher_done_notification
-    - automation.dishwasher_done_notification_2
+#    - automation.dishwasher_done_notification_2
     - light.kitchen
     - light.kitchen_ceiling
     - light.kitchen_shelves
+    - light.soul_light
     - switch.dishwasher
+    - weblink.kitchen_graphs
 
 entrance:
   name: Entrance
   view: true
   entities:
-    - automation.porch_light_off_on_sunrise
-    - automation.porch_light_on_on_sunset
+    - automation.entrance_light_off_on_sunrise
+    - automation.entrance_light_on_on_sunset
     - light.entrance
     - light.entrance_front_door
 
@@ -88,6 +93,7 @@ study:
     - light.study_ceiling_right
     - sensor.study_average_temperature
     - sensor.study_average_humidity
+    - weblink.study_graphs
 #    - sensor.study_inner_left_temperature
 #    - sensor.study_inner_left_temperature
 #    - sensor.study_inner_right_temperature
@@ -113,14 +119,26 @@ washing_room:
     - switch.washer
     - sensor.washing_room_average_humidity
     - sensor.washing_room_average_temperature
+    - weblink.washing_room_graphs
 
 guest_room:
   name: Guest Room
   view: false
   entities:
 
-Bathroom:
+bathroom:
   name: Bathroom
+  view: false
+  entities:
+
+back_porch:
+  name: Back Porch
+  view: false
+  entities:
+#    - switch.porch_hanging_lights
+
+back_garden:
+  name: Back Garden
   view: false
   entities:
 
@@ -129,7 +147,7 @@ front_garden:
   view: false
   entities:
 
-back_garden:
-  name: Back Garden
+front_porch:
+  name: Front Porch
   view: false
   entities:

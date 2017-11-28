@@ -9,3 +9,9 @@
   name: "Maria's Blanket"
   body_on: '{"state": true}'
   body_off: '{"state": false}'
+
+#- platform: rest
+#  resource: !secret porch_hanging_lights_api
+#  name: "Porch Hanging Lights"
+#  body_on: '{"state": true}'
+#  body_off: '{"state": false}'

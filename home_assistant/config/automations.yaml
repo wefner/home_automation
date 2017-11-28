@@ -30,21 +30,21 @@
           - file: /config/images/dryer_finished.png
             caption: Dryer is finished!
 
-- alias: 'Dishwasher done notification 2'
-  trigger:
-    platform: state
-    entity_id: sensor.dishwasher
-    from: 'active'
-    to: 'off'
-  action:
-    service: notify.home_bot
-    data:
-      title: dishwasher done picture
-      message: Dishwasher done!
-      data:
-        photo:
-          - file: /config/images/dishwasher_finished.png
-            caption: Dishwasher is finished (alternate)!
+#- alias: 'Dishwasher done notification 2'
+#  trigger:
+#    platform: state
+#    entity_id: sensor.dishwasher
+#    from: 'active'
+#    to: 'off'
+#  action:
+#    service: notify.home_bot
+#    data:
+#      title: dishwasher done picture
+#      message: Dishwasher done!
+#      data:
+#        photo:
+#          - file: /config/images/dishwasher_finished.png
+#            caption: Dishwasher is finished (alternate)!
 
 - alias: 'Dishwasher done notification'
   trigger:
@@ -63,7 +63,7 @@
             caption: Dishwasher is finished!
 
 
-- alias: 'Porch light ON on sunset'
+- alias: 'Entrance light ON on sunset'
   trigger:
     platform: sun
     event: sunset
@@ -75,7 +75,7 @@
       transition: 1800
       brightness: 64
 
-- alias: 'Porch light OFF on sunrise'
+- alias: 'Entrance light OFF on sunrise'
   trigger:
     platform: sun
     event: sunrise
