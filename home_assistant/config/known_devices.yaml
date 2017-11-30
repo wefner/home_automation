@@ -1,4 +1,3 @@
-
 philips_remote:
   hide_if_away: false
   mac:

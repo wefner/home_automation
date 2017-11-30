@@ -62,6 +62,8 @@ kitchen:
   view: true
   entities:
     - automation.dishwasher_done_notification
+    - automation.dishwasher_done_notification_maria
+    - automation.dishwasher_done_notification_costas
     - light.kitchen
     - light.kitchen_ceiling
     - light.kitchen_shelves
@@ -95,7 +97,11 @@ washing_room:
   view: true
   entities:
     - automation.dryer_done_notification
+    - automation.dryer_done_notification_maria
+    - automation.dryer_done_notification_costas
     - automation.washing_machine_done_notification
+    - automation.washing_machine_done_notification_maria
+    - automation.washing_machine_done_notification_costas
     - sensor.dryer
     - sensor.washing_machine
     - sensor.dryer_current_power

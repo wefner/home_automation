@@ -1,0 +1,56 @@
+- platform: template
+  sensors:
+    dryer:
+      friendly_name: 'Dryer'
+      entity_id: sensor.dryer_current_power
+      value_template: >-
+          {% set power_usage = (states.sensor.dryer_current_power.state | float) %}
+          {%- if power_usage < 1.0 %}
+              off
+          {%  elif power_usage >= 2.6 %}
+              active
+          {% elif 1.1 <= power_usage <= 2.5 %}
+              {%- if states.sensor.dryer.state == 'off' %}
+                  on
+              {%  elif states.sensor.dryer.state == 'active'  %}
+                  finished
+              {%- endif %}
+          {%- endif %}
+
+- platform: template
+  sensors:
+    washing_machine:
+      friendly_name: 'Washing Machine'
+      entity_id: sensor.washer_current_power
+      value_template: >-
+          {% set power_usage = (states.sensor.washer_current_power.state | float) %}
+          {%- if power_usage <= 1.0 %}
+              off
+          {%  elif power_usage >= 2.0 %}
+              active
+          {% elif 1.1 <= power_usage <= 1.9 %}
+              {%- if states.sensor.washing_machine.state == 'off' %}
+                  on
+              {%  elif states.sensor.washing_machine.state == 'active'  %}
+                  finished
+              {%- endif %}
+          {%- endif %}
+
+- platform: template
+  sensors:
+    dishwasher:
+      friendly_name: 'Dishwasher'
+      entity_id: sensor.dishwasher_current_power
+      value_template: >-
+          {% set power_usage = (states.sensor.dishwasher_current_power.state | float) %}
+          {%- if power_usage == 0 %}
+              off
+          {%  elif power_usage >= 1.2 %}
+              active
+          {% elif power_usage <= 1.1 %}
+              {%- if states.sensor.dishwasher.state == 'off' %}
+                  on
+              {%  elif states.sensor.dishwasher.state == 'active'  %}
+                  finished
+              {%- endif %}
+          {%- endif %}

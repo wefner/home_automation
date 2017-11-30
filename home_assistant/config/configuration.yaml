@@ -43,7 +43,7 @@ group: !include groups.yaml
 
 light: !include hue_lights.yaml
 
-sensor: !include sensors.yaml
+sensor: !include_dir_merge_list sensors/
 
 telegram_bot: !include telegram_bot.yaml
 
@@ -57,7 +57,7 @@ mqtt: !include mqtt.yaml
 
 influxdb: !include influxdb.yaml
 
-automation: !include automations.yaml
+automation: !include_dir_merge_list automations/
 
 switch: !include switches.yaml
 

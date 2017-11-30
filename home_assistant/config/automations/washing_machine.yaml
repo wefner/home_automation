@@ -1,0 +1,47 @@
+- alias: 'Washing Machine done notification'
+  trigger:
+    platform: state
+    entity_id: sensor.washing_machine
+    from: 'active'
+    to: 'finished'
+  action:
+    service: notify.home_bot
+    data:
+      title: Washing Machine done picture
+      message: Washing Machine done!
+      data:
+        photo:
+          - file: /config/images/washing_machine_finished.png
+            caption: Washing Machine is finished!
+
+- alias: 'Washing Machine done notification Maria'
+  trigger:
+    platform: state
+    entity_id: sensor.washing_machine
+    from: 'active'
+    to: 'finished'
+  action:
+    service: notify.telegram_maria
+    data:
+      title: Washing Machine done picture
+      message: Washing Machine done!
+      data:
+        photo:
+          - file: /config/images/washing_machine_finished.png
+            caption: Washing Machine is finished!
+
+- alias: 'Washing Machine done notification Costas'
+  trigger:
+    platform: state
+    entity_id: sensor.washing_machine
+    from: 'active'
+    to: 'finished'
+  action:
+    service: notify.telegram_costas
+    data:
+      title: Washing Machine done picture
+      message: Washing Machine done!
+      data:
+        photo:
+          - file: /config/images/washing_machine_finished.png
+            caption: Washing Machine is finished!

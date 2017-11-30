@@ -1,0 +1,47 @@
+- alias: 'Dryer done notification'
+  trigger:
+    platform: state
+    entity_id: sensor.dryer
+    from: 'active'
+    to: 'finished'
+  action:
+    service: notify.home_bot
+    data:
+      title: Dryer done picture
+      message: Dryer done!
+      data:
+        photo:
+          - file: /config/images/dryer_finished.png
+            caption: Dryer is finished!
+
+- alias: 'Dryer done notification Maria'
+  trigger:
+    platform: state
+    entity_id: sensor.dryer
+    from: 'active'
+    to: 'finished'
+  action:
+    service: notify.telegram_maria
+    data:
+      title: Dryer done picture
+      message: Dryer done!
+      data:
+        photo:
+          - file: /config/images/dryer_finished.png
+            caption: Dryer is finished!
+
+- alias: 'Dryer done notification Costas'
+  trigger:
+    platform: state
+    entity_id: sensor.dryer
+    from: 'active'
+    to: 'finished'
+  action:
+    service: notify.telegram_Costas
+    data:
+      title: Dryer done picture
+      message: Dryer done!
+      data:
+        photo:
+          - file: /config/images/dryer_finished.png
+            caption: Dryer is finished!

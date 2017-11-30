@@ -1,0 +1,19 @@
+- platform: template
+  sensors:
+    home_average_temperature:
+      friendly_name: 'Home Temperature'
+      unit_of_measurement: 'C'
+      value_template: >-
+        {{ ((float(states.sensor.bedroom_average_temperature.state) +
+             float(states.sensor.study_average_temperature.state) +
+             float(states.sensor.washing_room_average_temperature.state)) / 3) | round(2) }}
+
+- platform: template
+  sensors:
+    home_average_humidity:
+      friendly_name: 'Home Humidity'
+      unit_of_measurement: '%'
+      value_template: >-
+        {{ ((float(states.sensor.bedroom_average_humidity.state) +
+             float(states.sensor.study_average_humidity.state) +
+             float(states.sensor.washing_room_average_humidity.state)) / 3) | round(2) }}

@@ -1,0 +1,46 @@
+- platform: mqtt
+  state_topic: 'home/washing_room/back'
+  name: 'washing_room_back_temperature'
+  friendly_name: 'Washing_Room back temperature'
+  unit_of_measurement: 'C'
+  value_template: '{{ value_json.temperature }}'
+
+- platform: mqtt
+  state_topic: 'home/washing_room/back'
+  name: 'washing_room_back_humidity'
+  friendly_name: 'Washing_Room back humidity'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'
+
+
+- platform: mqtt
+  state_topic: 'home/washing_room/front'
+  name: 'washing_room_front_temperature'
+  friendly_name: 'Washing_Room front temperature'
+  unit_of_measurement: 'C'
+  value_template: '{{ value_json.temperature }}'
+
+- platform: mqtt
+  state_topic: 'home/washing_room/front'
+  name: 'washing_room_front_humidity'
+  friendly_name: 'Washing_Room front humidity'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'
+
+- platform: template
+  sensors:
+    washing_room_average_temperature:
+      friendly_name: 'Washing room Temperature'
+      unit_of_measurement: 'C'
+      value_template: >-
+        {{ ((float(states.sensor.washing_room_back_temperature.state) +
+             float(states.sensor.washing_room_front_temperature.state)) / 2) | round(2) }}
+
+- platform: template
+  sensors:
+    washing_room_average_humidity:
+      friendly_name: 'Washing room Humidity'
+      unit_of_measurement: '%'
+      value_template: >-
+        {{ ((float(states.sensor.washing_room_back_humidity.state) +
+             float(states.sensor.washing_room_front_humidity.state)) / 2) | round(2) }}
