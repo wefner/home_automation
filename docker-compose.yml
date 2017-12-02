@@ -109,6 +109,9 @@ services:
       - 8123
     ports:
       - 8123:8123
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0"
+      - "/dev/ttyACM1:/dev/ttyACM1"
     logging:
       # limit logs retained on host to 25MB
       driver: "json-file"

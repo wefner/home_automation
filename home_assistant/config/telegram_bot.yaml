@@ -3,3 +3,4 @@
   allowed_chat_ids:
     - !secret telegram_group_id
     - !secret telegram_costas_id
+    - !secret telegram_maria_id
