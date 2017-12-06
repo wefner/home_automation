@@ -1,0 +1,13 @@
+#!/bin/bash --login
+set -e
+cd $(dirname $0)/../..
+
+. _BOOT/scripts/bootstrap
+
+echo "Running docker compose"
+sudo docker-compose up -d
+
+# Need some time for dockers to boot up
+sleep 10
+
+python _BOOT/bin/bootstrap.py
